@@ -3,5 +3,6 @@
     <suite-files>
        <suite-file path="SomkeSuite.xml"/>
         <suite-file path="RegressionSuite.xml"/>
+        <suite-file path="groups.xml"/>
     </suite-files>
 </suite>

@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Exclude broken Tests">
+    <test name="low priority test case">
+        <groups>
+            <run>
+                <include name="somkegroup"/>
+                <exclude name="broken"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="SessionOne.Groups"/>
+        </classes>
+    </test>
+</suite>
