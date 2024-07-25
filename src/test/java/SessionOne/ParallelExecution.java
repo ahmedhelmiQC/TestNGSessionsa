@@ -1,5 +1,6 @@
 package SessionOne;
 
+import listeners.IInvocedMethod;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,7 +11,7 @@ import org.testng.asserts.SoftAssert;
 
 import javax.annotation.concurrent.ThreadSafe;
 import java.time.Duration;
-
+    @Listeners (IInvocedMethod.class)
 public class ParallelExecution {
     private SoftAssert softAssert;
 
@@ -31,7 +32,7 @@ public class ParallelExecution {
         driverThreadLocal.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
     @Parameters({"username","password"})
-    @Test (invocationCount = 3,threadPoolSize = 3)  // run 3 times in 3 thread
+    @Test //(invocationCount = 3,threadPoolSize = 3)  // run 3 times in 3 thread
     public void ValidloginTestcase(@Optional("admin") String username , @Optional("admin") String password){
         driverThreadLocal.get().findElement(By.id("inputUsername")).sendKeys(username); // username
         driverThreadLocal.get().findElement(By.id("inputPassword")).sendKeys(password);   // password
