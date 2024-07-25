@@ -43,6 +43,19 @@ public class Parameterization {
         // Assert.assertEquals(driver.getCurrentUrl(), "www.google.com","2");
 
     }
+    @Test
+    public void ValidloginTestcase2(@Optional("admin") String username , @Optional("admin") String password){
+        driver.findElement(By.id("inputUsername")).sendKeys(username); // username
+        driver.findElement(By.id("inputPassword")).sendKeys(password);   // password
+        driver.findElement(By.id("loginButton")).click();  // clicklogin
+
+        //driver.switchTo().alert().accept();
+        boolean expected = driver.getCurrentUrl().equals("https://ashraaf7.github.io/AA-Practice-Test-Automation/Pages/main.html");
+
+        Assert.assertTrue(expected, "1");
+        // Assert.assertEquals(driver.getCurrentUrl(), "www.google.com","2");
+
+    }
     @AfterMethod(alwaysRun = true)
     public void quite(){
         driver.quit();
