@@ -1,5 +1,7 @@
 package SessionOne;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,6 +15,7 @@ import java.time.Duration;
 public class Parameterization {
     private WebDriver driver;
     private SoftAssert softAssert;
+    //public Logger logger = LogManager.getLogger();
 
     @Parameters (value = "browser")
     @BeforeMethod(alwaysRun = true)
@@ -45,9 +48,13 @@ public class Parameterization {
     }
     @Test
     public void ValidloginTestcase2(@Optional("admin") String username , @Optional("admin") String password){
+        LogUtility.LOGGER.info("Test Case Started");
         driver.findElement(By.id("inputUsername")).sendKeys(username); // username
+        LogUtility.LOGGER.info("username: admin written");
         driver.findElement(By.id("inputPassword")).sendKeys(password);   // password
+        LogUtility.LOGGER.info("password:admin written");
         driver.findElement(By.id("loginButton")).click();  // clicklogin
+        LogUtility.LOGGER.info("click on button");
 
         //driver.switchTo().alert().accept();
         boolean expected = driver.getCurrentUrl().equals("https://ashraaf7.github.io/AA-Practice-Test-Automation/Pages/main.html");

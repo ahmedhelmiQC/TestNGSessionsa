@@ -7,7 +7,6 @@ import org.testng.ITestResult;
 public class ITest implements ITestListener {
    public void onTestStart(ITestResult result) {
        System.out.println(result.getName());
-
     }
 
     public void onTestSuccess(ITestResult result) {

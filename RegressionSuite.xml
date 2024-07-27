@@ -13,6 +13,7 @@
         <classes>
             <class name="SessionOne.Dependencies">
                 <methods>
+                    <include name="RegisterTC"/>
                     <include name="LoginTCRun"/>
                 </methods>
             </class>

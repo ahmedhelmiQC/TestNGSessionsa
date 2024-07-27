@@ -26,7 +26,7 @@ public class Dependencies {
         //Assert.fail();
     }
 
-    @Test (dependsOnMethods = "RegisterTC" , alwaysRun = true)
+    @Test (dependsOnMethods = "RegisterTC" )
     public void LoginTCRun(){
         System.out.println("RegisterTC");
     }

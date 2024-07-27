@@ -1,0 +1,4 @@
+[INFO] 27-07-2024 23:53:02 [main] [SessionOne.Parameterization.ValidloginTestcase2(Parameterization.java:51)] - Test Case Started
+[INFO] 27-07-2024 23:53:03 [main] [SessionOne.Parameterization.ValidloginTestcase2(Parameterization.java:51)] - username: admin written
+[INFO] 27-07-2024 23:53:03 [main] [SessionOne.Parameterization.ValidloginTestcase2(Parameterization.java:51)] - password:admin written
+[INFO] 27-07-2024 23:53:03 [main] [SessionOne.Parameterization.ValidloginTestcase2(Parameterization.java:51)] - click on button

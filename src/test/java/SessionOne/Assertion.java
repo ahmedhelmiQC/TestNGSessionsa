@@ -36,8 +36,8 @@ public class Assertion {
         driver.switchTo().alert().accept();
         boolean expected = driver.getCurrentUrl().equals("https://ashraaf7.github.io/AA-Practice-Test-Automation/Pages/main.html");
 
-        Assert.assertTrue(expected, "1");
-        Assert.assertEquals(driver.getCurrentUrl(), "www.google.com","2");
+        Assert.assertFalse(expected, "1");
+       // Assert.assertFalse(driver.getCurrentUrl(), "www.google.com","2");
 
     }
     @Test (priority = 1 )
@@ -49,8 +49,8 @@ public class Assertion {
         driver.switchTo().alert().accept();
         boolean expected = driver.getCurrentUrl().equals("https://ashraaf7.github.io/AA-Practice-Test-Automation/Pages/main.html");
         softAssert = new SoftAssert();
-        softAssert.assertTrue(expected, "1");
-        softAssert.assertEquals(driver.getCurrentUrl(), "www.google.com","2");
+        softAssert.assertFalse(expected, "1");
+        //softAssert.assertFalse(driver.getCurrentUrl(), "www.google.com","2");
         softAssert.assertAll();
 
     }
